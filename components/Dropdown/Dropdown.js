@@ -14,6 +14,10 @@ class Dropdown {
   toggleContent() {
     // Toggle the ".dropdown-hidden" class off and on
     this.content.classList.toggle('dropdown-hidden');
+
+    TweenMax.from(".dropdown-content",1,{ x:-100 , opacity:0 , ease: Elastic.easeOut })
+    .to(".dropdown-content",1,{ x:200 , opacity:0 , ease: Elastic.easeIn } ,'+=1');﻿
+    // .to(".dropdown-content",1,{ x:-100 , opacity:0 , ease: Elastic.easeIn } ,'+=1');﻿
   }
 }
 
